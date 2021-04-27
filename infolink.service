@@ -1,0 +1,11 @@
+[Unit]
+Description=Provide general ELM info to the IPMC
+Requires=elmlink.service
+After=elmlink.service
+
+[Service]
+Type=simple
+ExecStart=/usr/libexec/infolinkd
+
+[Install]
+WantedBy=multi-user.target
